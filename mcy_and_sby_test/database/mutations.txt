@@ -1,0 +1,10 @@
+mutate -mode none
+mutate -mode inv -module dut -cell $xor$design.sv:2$1 -port Y -portbit 0 -wire o -wirebit 0 -src design.sv:1.37-1.38 -src design.sv:2.14-2.19
+mutate -mode const0 -module dut -cell $xor$design.sv:2$1 -port Y -portbit 0 -wire o -wirebit 0 -src design.sv:1.37-1.38 -src design.sv:2.14-2.19
+mutate -mode const1 -module dut -cell $xor$design.sv:2$1 -port Y -portbit 0 -wire o -wirebit 0 -src design.sv:1.37-1.38 -src design.sv:2.14-2.19
+mutate -mode inv -module dut -cell $xor$design.sv:2$1 -port B -portbit 0 -wire b -wirebit 0 -src design.sv:1.27-1.28 -src design.sv:2.14-2.19
+mutate -mode const0 -module dut -cell $xor$design.sv:2$1 -port B -portbit 0 -wire b -wirebit 0 -src design.sv:1.27-1.28 -src design.sv:2.14-2.19
+mutate -mode const1 -module dut -cell $xor$design.sv:2$1 -port B -portbit 0 -wire b -wirebit 0 -src design.sv:1.27-1.28 -src design.sv:2.14-2.19
+mutate -mode inv -module dut -cell $xor$design.sv:2$1 -port A -portbit 0 -wire a -wirebit 0 -src design.sv:1.18-1.19 -src design.sv:2.14-2.19
+mutate -mode const0 -module dut -cell $xor$design.sv:2$1 -port A -portbit 0 -wire a -wirebit 0 -src design.sv:1.18-1.19 -src design.sv:2.14-2.19
+mutate -mode const1 -module dut -cell $xor$design.sv:2$1 -port A -portbit 0 -wire a -wirebit 0 -src design.sv:1.18-1.19 -src design.sv:2.14-2.19

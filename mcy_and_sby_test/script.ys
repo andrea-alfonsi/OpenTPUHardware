@@ -1,0 +1,3 @@
+read -sv design.sv
+prep -top dut
+write_ilang database/design.il

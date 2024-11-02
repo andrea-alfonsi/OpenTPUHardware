@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 1
+
+[engines]
+smtbmc yices
+
+[script]
+read -sv design.sv
+read -sv -formal design_tb.sv
+prep -top tb
+
+[files]
+design.sv
+design_tb.sv

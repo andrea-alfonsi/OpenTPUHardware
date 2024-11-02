@@ -1,0 +1,2 @@
+read_ilang database/design.il
+mutate -list 1000 -seed 635780872 -none -o database/mutations.txt -s database/sources.txt
