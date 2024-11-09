@@ -1,3 +1,7 @@
+`ifndef CORE_PROCESSING_ELEMENTS_REDAS_PE
+`define CORE_PROCESSING_ELEMENTS_REDAS_PE
+
+
 // If editing this file edit also `redas_pe_config/redas_pe_simulation.sv` so they are always synced.
 `include "macros/annotations.svh"
 
@@ -157,3 +161,5 @@ module redas_pe_crossbar # ( parameter DATA_WIDTH = 8 )(
   assign output_b = mode ? input_b : input_a;
   
 endmodule 
+
+`endif

@@ -1,3 +1,6 @@
+`ifndef CORE_CONTROL_FIXED_PRIORITY_ARBITER
+`define CORE_CONTROL_FIXED_PRIORITY_ARBITER
+
 module fixed_priority_arbiter #(
   parameter NUM_PORTS = 2
 ) (
@@ -15,3 +18,6 @@ module fixed_priority_arbiter #(
   
   assign grants[NUM_PORTS-1:0] = requests[NUM_PORTS-1:0] & ~higher_priority_requests[NUM_PORTS-1:0];
 endmodule
+
+
+`endif

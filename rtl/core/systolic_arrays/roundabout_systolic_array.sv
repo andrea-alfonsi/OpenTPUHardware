@@ -1,3 +1,6 @@
+`ifndef CORE_SYSTOLIC_ARRAY_ROUNDABOUT_SYSTOLIC_ARRAY
+`define CORE_SYSTOLIC_ARRAY_ROUNDABOUT_SYSTOLIC_ARRAY
+
 `include "rtl/core/processing_elements/redas_pe.sv"
 
 module roundabout_systolic_array #(
@@ -50,3 +53,6 @@ module roundabout_systolic_array #(
   endtask //automatic
 
 endmodule
+
+
+`endif

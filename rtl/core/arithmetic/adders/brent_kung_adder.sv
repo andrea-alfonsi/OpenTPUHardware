@@ -1,5 +1,5 @@
-`define INPUTSIZE 32		//set the input size n
-`define GROUPSIZE 8		//set the group size = 1, 2, 4 or 8
+`ifndef CORE_ARITHMETIC_ADDERS_BRENT_KUNG_ADDER
+`define CORE_ARITHMETIC_ADDERS_BRENT_KUNG_ADDER
 
 // https://gist.github.com/ouwenshi/606ef1c0e53f63cf343617093f4c0e5e
 module brent_kung_adder #(
@@ -196,3 +196,5 @@ module FA_CLA_prefix(
 	assign s = q[0] ^ cin;
 	assign q[1] = a & b;
 endmodule
+
+`endif

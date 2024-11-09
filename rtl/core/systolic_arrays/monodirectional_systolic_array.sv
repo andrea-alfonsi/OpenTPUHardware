@@ -1,3 +1,6 @@
+`ifndef CORE_SYSTOLIC_ARRAY_MONODIRECTIONAL_SYSTOLIC_ARRAY
+`define CORE_SYSTOLIC_ARRAY_MONODIRECTIONAL_SYSTOLIC_ARRAY
+
 `include "rtl/core/processing_elements/basic_pe.sv"
 
 module monodirectional_systolic_array #(
@@ -52,3 +55,6 @@ module monodirectional_systolic_array #(
   endgenerate
   
 endmodule
+
+
+`endif

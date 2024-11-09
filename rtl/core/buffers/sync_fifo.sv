@@ -1,3 +1,6 @@
+`ifndef CORE_BUFFERS_SYNC_FIFO
+`define CORE_BUFFERS_SYNC_FIFO
+
 module sync_fifo #(
   parameter  DEPTH         = 16,
   parameter  WIDTH         = 8,
@@ -46,3 +49,5 @@ module sync_fifo #(
                  (write_pointer[POINTER_WIDTH-1:0] == read_pointer[POINTER_WIDTH-1:0]);
 
 endmodule
+
+`endif

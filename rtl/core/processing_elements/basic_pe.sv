@@ -1,3 +1,6 @@
+`ifndef CORE_PROCESSING_ELEMENTS_BASIC_PE
+`define CORE_PROCESSING_ELEMENTS_BASIC_PE
+
 typedef struct packed {
   logic [0:0] store_weight;  // 1 bit
 } basic_pe_configuration;
@@ -43,3 +46,5 @@ module basic_pe #(
   end
   
 endmodule
+
+`endif

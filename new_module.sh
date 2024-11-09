@@ -11,7 +11,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "Generate all the files for the delepment of a new module"
   echo
   echo "Arguments:"
-  echo "MODULE_HIERARCH.  Example core.processing_elements.basic_pe"
+  echo "MODULE_HIERARCHY.  Example core.processing_elements.basic_pe"
   echo ""
   echo ""
   exit 0;
@@ -25,11 +25,13 @@ fi
 
 MODULE_NAME=$( echo "$INPUT_MODULE" | awk '{split($0,a,"."); print a[length(a)]}')
 MODULE_HIERARCHY=$( echo "$INPUT_MODULE" | awk '{sub(".[^.]+$","")} 1' | tr "." "/" )
+echo -e "\`ifndef ${MODULE_HIERARCHY^^}_${MODULE_NAME^^}\n\`define ${MODULE_HIERARCHY^^}_${MODULE_NAME^^}\n\nmodule ${MODULE_NAME} #() ();\nendmodule\n\n\`endif" > ${SCRIPT_DIR}/rtl/${MODULE_HIERARCHY}/${MODULE_NAME}.sv
+exit;
 
 # Create the file with the module definition
 # Todo add a template parameter to start with the provided template
 mkdir -p ${SCRIPT_DIR}/rtl/${MODULE_HIERARCHY}
-echo -e "module ${MODULE_NAME} #() ();\nendmodule" > ${SCRIPT_DIR}/rtl/${MODULE_HIERARCHY}/${MODULE_NAME}.sv
+echo -e "\`ifndef ${MODULE_HIERARCHY^^}_${MODULE_NAME^^}\n\`define ${MODULE_HIERARCHY^^}_${MODULE_NAME^^}\n\nmodule ${MODULE_NAME} #() ();\nendmodule\n\n\`endif" > ${SCRIPT_DIR}/rtl/${MODULE_HIERARCHY}/${MODULE_NAME}.sv
 
 # Create the file for the automatic tests
 mkdir -p ${SCRIPT_DIR}/sim/${MODULE_HIERARCHY}/${MODULE_NAME}
